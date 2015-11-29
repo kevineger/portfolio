@@ -26,8 +26,7 @@
 	      <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
 	  </head>
 	  <body>
-
-	  	<a href="#aboutMe" class="smoothScroll">
+	  	<a href="#aboutMe">
 	  		<div class="logo-container">
 	  			<img src="images/ke_logo.png" class="logo">
 	  		</div>
@@ -54,37 +53,65 @@
 	  			<!-- Collect the nav links, forms, and other content for toggling -->
 	  			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  				<ul class="nav navbar-nav">
-	  					<li><a href="#aboutMe" class="smoothScroll">About Me</a></li>
-	  					<li><a href="#education" class="smoothScroll">Education</a></li>
-	  					<li><a href="#projects" class="smoothScroll">Projects</a></li>
-	  					<li><a href="#skills" class="smoothScroll">My Skills</a> </li>
-	  					<li><a href="#hobbies" class="smoothScroll">Hobbies</a></li>
+	  					<li><a href="#aboutMe" class="active">About Me</a></li>
+	  					<li><a href="#education">Education</a></li>
+	  					<li><a href="#projects">Projects</a></li>
+	  					<li><a href="#skills">My Skills</a> </li>
+	  					<li><a href="#hobbies">Hobbies</a></li>
 	  				</ul>
 	  			</div><!-- /.navbar-collapse -->
 	  		</div><!-- /.container-fluid -->
 	  	</nav>
 
 	  	<!-- About Me -->
-	  	<a name="aboutMe"></a> 
 	  	<?php include 'content/about.html' ?>
 
 	  	<!-- Education -->
-	  	<a name="education"></a> 
 	  	<?php include 'content/education.html' ?>
-
-	  	<a name="projects"></a> 
+	  	
 	  	<!-- Projects -->
 	  	<?php include 'content/projects.html' ?>
 
-	  	<a name="skills"></a> 
 	  	<!-- Skills -->
 	  	<?php include 'content/skills.html' ?>
 
 	  	<!-- Hobbies -->
-	  	<a name="hobbies"></a> 
 	  	<?php include 'content/hobbies.html' ?>
 	  	<!-- Javascript -->
 	  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	  	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>	
+
+	  	<script type="text/javascript">
+	  		var sections = $('.wrapper')
+	  		, nav = $('nav')
+	  		, nav_height = nav.outerHeight();
+
+	  		$(window).on('scroll', function () {
+	  			var cur_pos = $(this).scrollTop();
+
+	  			sections.each(function() {
+	  				var top = $(this).offset().top - nav_height,
+	  				bottom = top + $(this).outerHeight();
+
+	  				if (cur_pos >= top && cur_pos <= bottom) {
+	  					nav.find('a').removeClass('active');
+	  					sections.removeClass('active');
+
+	  					$(this).addClass('active');
+	  					nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+	  				}
+	  			});
+	  		});
+	  		nav.find('a').on('click', function () {
+	  			var $el = $(this)
+	  			console.log($el)
+	  			, id = $el.attr('href');
+
+	  			$('html, body').animate({
+	  				scrollTop: $(id).offset().top - nav_height
+	  			}, 500);
+
+	  			return false;
+	  		});
+	  	</script>
 	  </body>
 	  </html>
