@@ -20,6 +20,7 @@
 	      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	      <!-- Custom CSS -->
 	      <link href="assets/css/global.css" rel="stylesheet">
+	      <link href="assets/css/nav.css" rel="stylesheet">
 	      <!-- Google Fonts -->
 	      <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 	      <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
@@ -37,9 +38,9 @@
 	  		</div>
 	  	</a>
 
-	  	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  	<!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  		<div class="container-fluid">
-	  			<!-- Brand and toggle get grouped for better mobile display -->
+	  			Brand and toggle get grouped for better mobile display
 	  			<div class="navbar-header">
 	  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 	  					<span class="sr-only">Toggle navigation</span>
@@ -47,10 +48,8 @@
 	  					<span class="icon-bar"></span>
 	  					<span class="icon-bar"></span>
 	  				</button>
-	  				<!-- <img src="images/ke_logo.png" style="height:50px; padding-right:20px; vertical-align:middle;"> -->
 	  			</div>
 
-	  			<!-- Collect the nav links, forms, and other content for toggling -->
 	  			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  				<ul class="nav navbar-nav">
 	  					<li><a href="#aboutMe" class="active">About Me</a></li>
@@ -59,8 +58,18 @@
 	  					<li><a href="#skills">My Skills</a> </li>
 	  					<li><a href="#hobbies">Hobbies</a></li>
 	  				</ul>
-	  			</div><!-- /.navbar-collapse -->
-	  		</div><!-- /.container-fluid -->
+	  			</div>
+	  		</div>
+	  	</nav> -->
+
+	  	<nav id="topnav" class="navbar-fixed-top">
+	  		<ul>
+	  			<li><a href="#aboutMe" class="active">About</a></li>
+	  			<li><a href="#education">Education</a></li>
+	  			<li><a href="#projects">Projects</a></li>
+	  			<li><a href="#skills">Skills</a> </li>
+	  			<li><a href="#hobbies">Hobbies</a></li>
+	  		</ul>
 	  	</nav>
 
 	  	<!-- About Me -->
