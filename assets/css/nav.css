@@ -1,6 +1,6 @@
 #topnav {
   -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
-  background: #FFF;
+  background: #F8F8F8;
   width: auto;
   text-align: center;
 }
@@ -73,7 +73,7 @@
   top: 24px;
   height: 6px;
   width: 6px;
-  background: black;
+  background: #816856;
   opacity: .7;
 }
 #topnav ul li a:before {
@@ -84,7 +84,7 @@
   bottom: 0;
   height: 3px;
   width: 0;
-  background: red;
+  background: #816856;
   -webkit-transition: width .25s;
   -moz-transition: width .25s;
   -ms-transition: width .25s;
@@ -96,7 +96,7 @@
   display: none;
 }
 #topnav ul li a.active {
-  color: red;
+  color: #816856;
 }
 #topnav ul li a.about.active {
   color: #816856;
