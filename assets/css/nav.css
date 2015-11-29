@@ -32,7 +32,7 @@
   text-align: center;
 }
 #topnav ul li a {
-  color: orange;
+  color: gray;
   text-decoration: none;
   display: block;
   padding: 20px 25px;
@@ -50,6 +50,21 @@
 #topnav ul li a:hover {
   color: #333333;
 }
+#topnav ul li a.about:after, #topnav ul li a.about:before {
+  background: #816856;
+}
+#topnav ul li a.education:after, #topnav ul li a.education:before {
+  background: #0989B8;
+}
+#topnav ul li a.projects:after, #topnav ul li a.projects:before {
+  background: #7F2237;
+}
+#topnav ul li a.skills:after, #topnav ul li a.skills:before {
+  background: #743F2F;
+}
+#topnav ul li a.hobbies:after, #topnav ul li a.hobbies:before {
+  background: #599A5A;
+}
 #topnav ul li a:after {
   content: "";
   display: block;
@@ -58,8 +73,8 @@
   top: 24px;
   height: 6px;
   width: 6px;
-  background: blue;
-  opacity: .5;
+  background: black;
+  opacity: .7;
 }
 #topnav ul li a:before {
   content: "";
@@ -69,7 +84,7 @@
   bottom: 0;
   height: 3px;
   width: 0;
-  background: #333333;
+  background: red;
   -webkit-transition: width .25s;
   -moz-transition: width .25s;
   -ms-transition: width .25s;
@@ -82,6 +97,21 @@
 }
 #topnav ul li a.active {
   color: red;
+}
+#topnav ul li a.about.active {
+  color: #816856;
+}
+#topnav ul li a.education.active {
+  color: #0989B8;
+}
+#topnav ul li a.projects.active {
+  color: #7F2237;
+}
+#topnav ul li a.skills.active {
+  color: #743F2F;
+}
+#topnav ul li a.hobbies.active {
+  color: #599A5A;
 }
 #topnav ul li a.active:before {
   width: 100%;
