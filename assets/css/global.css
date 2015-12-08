@@ -48,9 +48,14 @@ nav.navbar ul.nav>li>a.active {
 }*/
 h3 {
 	font-family: 'Quicksand', sans-serif;
-	font-size: 20px;
+	font-size: 25px;
 	margin-top:10px;
 	padding-bottom:0;
+}
+h4 {
+	font-family: 'Oxygen', sans-serif;
+	font-size:20px;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .jumbotron {
 	padding:30px;
@@ -120,7 +125,7 @@ section.module.parallax h1 {
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	margin-top:0;
 	padding-bottom:0;
 }
@@ -136,7 +141,7 @@ section.module.parallax h3 {
 	color: rgba(255, 255, 255, 0.8);
 	font-size: 20px;
 	text-align: center;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	margin-top:30px;
 	padding-bottom:0;
 }
@@ -157,7 +162,7 @@ ul > li {
 /*If viewing on a large screen - Larger heading font-size*/
 @media all and (min-width: 1044px) {
 	section.module.parallax h1 {
-		font-size: 140px;
+		font-size: 115px;
 	}
 	section.module.parallax h3 {
 		font-size:30px;
