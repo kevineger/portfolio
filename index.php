@@ -21,6 +21,7 @@
 	      <!-- Custom CSS -->
 	      <link href="assets/css/global.css" rel="stylesheet">
 	      <link href="assets/css/nav.css" rel="stylesheet">
+	      <link rel="stylesheet" href="assets/css/mailer_style.css">
 	      <!-- Google Fonts -->
 	      <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 	      <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
@@ -32,19 +33,31 @@
 	  			<img src="images/ke_logo.png" class="logo">
 	  		</div>
 	  	</a>
-	  	<a href="#">
+<!-- 	  	<a href="#">
 	  		<div class="contact-container">
 	  			<a href="mailto:egerkevinjames@gmail.com"><p>Contact Me</p></a>
 	  		</div>
-	  	</a>=
+	  	</a> -->
 	  	<nav id="topnav" class="navbar-fixed-top">
-	  		<ul>
-	  			<li><a href="#about" class="active">About</a></li>
-	  			<li><a href="#education">Education</a></li>
-	  			<li><a href="#projects">Projects</a></li>
-	  			<li><a href="#skills">Skills</a> </li>
-	  			<li><a href="#hobbies">Hobbies</a></li>
-	  		</ul>
+	  		<div class="container-fluid">
+	  			<div class="navbar-header">
+	  				<button style="background-color:#DFDCD7" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	  					<span class="sr-only">Toggle navigation</span>
+	  					<span style="background-color:#FFF" class="icon-bar"></span>
+	  					<span style="background-color:#FFF" class="icon-bar"></span>
+	  					<span style="background-color:#FFF" class="icon-bar"></span>
+	  				</button>
+	  			</div>
+	  			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	  				<ul id="navbar-list">
+	  					<li><a href="#about" class="active">About</a></li>
+	  					<li><a href="#education">Education</a></li>
+	  					<li><a href="#projects">Projects</a></li>
+	  					<li><a href="#skills">Skills</a> </li>
+	  					<li><a href="#contact">Contact</a></li>
+	  				</ul>
+	  			</div>
+	  		</div>
 	  	</nav>
 
 	  	<!-- About Me -->
@@ -59,12 +72,21 @@
 	  	<!-- Skills -->
 	  	<?php include 'content/skills.html' ?>
 
-	  	<!-- Hobbies -->
-	  	<?php include 'content/hobbies.html' ?>
+	  	<!-- Contact -->
+	  	<?php include 'content/contact.html' ?>
 	  	<!-- Javascript -->
 	  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  	<script src="assets/js/app.js"></script>
 
 	  	<script type="text/javascript">
+	  		// Collapse navbar after click (if it is collapsed to begin with)
+	  		$(document).ready(function () {
+	  			$("#navbar-list li a").click(function(event) {
+	  				$(".navbar-collapse").collapse('hide');
+	  			});
+	  		});
+
 	  		// Corret the active states of the navbar on scroll and click
 	  		var sections = $('.wrapper')
 	  		, nav = $('nav')
@@ -77,7 +99,8 @@
 	  				var top = $(this).offset().top - nav_height,
 	  				bottom = top + $(this).outerHeight();
 
-	  				if (cur_pos >= top && cur_pos <= bottom) {
+	  				if (cur_pos >= top && cur_pos <= bottom) 
+	  				{
 	  					nav.find('a').removeClass('active');
 	  					sections.removeClass('active');
 
@@ -85,26 +108,28 @@
 	  					nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
 
 	  					// Toggle the box separator colours depending on page
-	  					switch($(this).attr('id')){
+	  					switch($(this).attr('id'))
+	  					{
 	  						case 'about':
-	  							nav.find('a').removeClass('education projects skills hobbies').addClass('about');
-	  							break;
+	  						nav.find('a').removeClass('education projects skills hobbies').addClass('about');
+	  						break;
 	  						case 'education':
-	  							nav.find('a').removeClass('about projects skills hobbies').addClass('education');
-	  							break;
+	  						nav.find('a').removeClass('about projects skills hobbies').addClass('education');
+	  						break;
 	  						case 'projects':
-	  							nav.find('a').removeClass('about education skills hobbies').addClass('projects');
-	  							break;
+	  						nav.find('a').removeClass('about education skills hobbies').addClass('projects');
+	  						break;
 	  						case 'skills':
-	  							nav.find('a').removeClass('about education projects hobbies').addClass('skills');
-	  							break;
+	  						nav.find('a').removeClass('about education projects hobbies').addClass('skills');
+	  						break;
 	  						case 'hobbies':
-	  							nav.find('a').removeClass('about education projects skills').addClass('hobbies');
-	  							break;
+	  						nav.find('a').removeClass('about education projects skills').addClass('hobbies');
+	  						break;
 	  					}
 	  				}
 	  			});
-	  		});
+});
+
 	  		// Smooth scroll between sections
 	  		nav.find('a').on('click', function () {
 	  			var $el = $(this)
@@ -116,7 +141,6 @@
 
 	  			return false;
 	  		});
-	  		// Toggle colours of separating blocks in navbar
 
 	  	</script>
 	  </body>
