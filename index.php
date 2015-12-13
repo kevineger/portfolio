@@ -128,7 +128,7 @@
 	  					}
 	  				}
 	  			});
-});
+			});
 
 	  		// Smooth scroll between sections
 	  		nav.find('a').on('click', function () {
