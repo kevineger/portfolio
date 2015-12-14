@@ -62,8 +62,8 @@
 #topnav ul li a.skills:after, #topnav ul li a.skills:before {
   background: #743F2F;
 }
-#topnav ul li a.hobbies:after, #topnav ul li a.hobbies:before {
-  background: #599A5A;
+#topnav ul li a.contact:after, #topnav ul li a.contact:before {
+  background: #91BC6A;
 }
 #topnav ul li a:after {
   content: "";
@@ -110,8 +110,8 @@
 #topnav ul li a.skills.active {
   color: #743F2F;
 }
-#topnav ul li a.hobbies.active {
-  color: #599A5A;
+#topnav ul li a.contact.active {
+  color: #91BC6A;
 }
 #topnav ul li a.active:before {
   width: 100%;

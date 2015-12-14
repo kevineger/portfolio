@@ -111,19 +111,19 @@
 	  					switch($(this).attr('id'))
 	  					{
 	  						case 'about':
-	  						nav.find('a').removeClass('education projects skills hobbies').addClass('about');
+	  						nav.find('a').removeClass('education projects skills contact').addClass('about');
 	  						break;
 	  						case 'education':
-	  						nav.find('a').removeClass('about projects skills hobbies').addClass('education');
+	  						nav.find('a').removeClass('about projects skills contact').addClass('education');
 	  						break;
 	  						case 'projects':
-	  						nav.find('a').removeClass('about education skills hobbies').addClass('projects');
+	  						nav.find('a').removeClass('about education skills contact').addClass('projects');
 	  						break;
 	  						case 'skills':
-	  						nav.find('a').removeClass('about education projects hobbies').addClass('skills');
+	  						nav.find('a').removeClass('about education projects contact').addClass('skills');
 	  						break;
-	  						case 'hobbies':
-	  						nav.find('a').removeClass('about education projects skills').addClass('hobbies');
+	  						case 'contact':
+	  						nav.find('a').removeClass('about education projects skills').addClass('contact');
 	  						break;
 	  					}
 	  				}
