@@ -20,8 +20,9 @@
 	      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	      <!-- Custom CSS -->
 	      <link href="assets/css/global.css" rel="stylesheet">
+	      <link href="assets/css/forms.css" rel="stylesheet">
 	      <link href="assets/css/nav.css" rel="stylesheet">
-	      <link rel="stylesheet" href="assets/css/mailer_style.css">
+	      <link href="assets/css/mailer_style.css" rel="stylesheet">
 	      <!-- Google Fonts -->
 	      <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 	      <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
@@ -128,7 +129,7 @@
 	  					}
 	  				}
 	  			});
-			});
+});
 
 	  		// Smooth scroll between sections
 	  		nav.find('a').on('click', function () {

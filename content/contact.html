@@ -8,7 +8,7 @@
 	</section>
 	<section class="module">
 		<div class="content-container content">
-			<form id="ajax-contact" method="post" action="mailer.php">
+			<!-- <form id="ajax-contact" method="post" action="mailer.php">
 				<div class="field">
 					<label for="name">Name:</label>
 					<input type="text" id="name" name="name" required>
@@ -28,6 +28,43 @@
 
 				<div class="field">
 					<button type="submit">Send</button>
+				</div>
+			</form> -->
+			<form id="ajax-contact" class="form-horizontal" method="post" action="mailer.php">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="group">
+							<input type="text" id="name" class="material" name="name" required>
+							<span class="bar"></span>
+							<label class="material">Name</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="group">
+							<input type="text" id="email" class="material" name="email" required>
+							<span class="bar"></span>
+							<label class="material">Email</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="group">
+							<textarea id="message" class="material" name="message" required rows="4"></textarea>
+							<span class="bar"></span>
+							<label class="material">Message</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8 col-md-offset-2">
+					<div id="form-messages"></div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-4 col-md-offset-4 text-center">
+						<button type="submit" class="btn btn-primary">Send</button>
+					</div>
 				</div>
 			</form>
 		</div>
