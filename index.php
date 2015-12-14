@@ -34,11 +34,6 @@
 	  			<img src="images/ke_logo.png" class="logo">
 	  		</div>
 	  	</a>
-<!-- 	  	<a href="#">
-	  		<div class="contact-container">
-	  			<a href="mailto:egerkevinjames@gmail.com"><p>Contact Me</p></a>
-	  		</div>
-	  	</a> -->
 	  	<nav id="topnav" class="navbar-fixed-top">
 	  		<div class="container-fluid">
 	  			<div class="navbar-header">
